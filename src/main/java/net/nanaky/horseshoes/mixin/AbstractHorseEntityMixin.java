@@ -17,6 +17,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.equine.AbstractHorse;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.core.BlockPos;
@@ -215,15 +216,17 @@ public abstract class AbstractHorseEntityMixin extends Animal implements IHorses
         if (!horseshoes$hasHorseshoes()) return;
         if (!player.isShiftKeyDown()) return;
 
-        // Remove horseshoe from container and give to player
         ItemStack horseshoes = horseshoes$container.getItem(0).copy();
+        if (EnchantmentHelper.has(horseshoes, net.minecraft.world.item.enchantment.EnchantmentEffectComponents.PREVENT_ARMOR_CHANGE)) {
+            cir.setReturnValue(InteractionResult.PASS);
+                return;
+        }
+
         horseshoes$container.setItem(0, ItemStack.EMPTY);
 
-        // Play shear sound
         this.playSound(SoundEvents.SHEEP_SHEAR, 1.0F, 1.0F);
         this.playSound(SoundEvents.HORSE_ARMOR_UNEQUIP.value(), 0.5F, 1.2F);
 
-        // Damage shears
         heldItem.hurtAndBreak(1, player, hand == InteractionHand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
 
         this.spawnAtLocation((ServerLevel) this.level(), horseshoes);
@@ -255,7 +258,10 @@ public abstract class AbstractHorseEntityMixin extends Animal implements IHorses
         if (horseshoes$hasHorseshoes()) {
             ItemStack horseshoes = horseshoes$container.getItem(0);
             if (!horseshoes.isEmpty()) {
+                if (!EnchantmentHelper.has(horseshoes, 
+                    net.minecraft.world.item.enchantment.EnchantmentEffectComponents.PREVENT_EQUIPMENT_DROP)) {
                 this.spawnAtLocation(level, horseshoes);
+                }
                 horseshoes$container.setItem(0, ItemStack.EMPTY);
             }
         }

@@ -59,7 +59,6 @@ public abstract class HorseScreenHandlerMixin extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
-        if (ModConfigs.SLOT_LOCK) return ItemStack.EMPTY;
         int horseshoeIndex = this.slots.size() - 1;
         Slot horseshoeSlot = this.slots.get(horseshoeIndex);
 
@@ -74,6 +73,10 @@ public abstract class HorseScreenHandlerMixin extends AbstractContainerMenu {
             // slot lock off — allow shift-click out
             ItemStack stack = horseshoeSlot.getItem();
             if (stack.isEmpty()) return ItemStack.EMPTY;
+            if (net.minecraft.world.item.enchantment.EnchantmentHelper.has(
+                stack, net.minecraft.world.item.enchantment.EnchantmentEffectComponents.PREVENT_ARMOR_CHANGE)) {
+                return ItemStack.EMPTY;
+            }
             if (!this.moveItemStackTo(stack, playerInvStart, playerInvEnd, true)) {
                 return ItemStack.EMPTY;
             }

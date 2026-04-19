@@ -8,7 +8,7 @@ import net.minecraft.client.renderer.entity.state.EquineRenderState;
 public class HorseShoesDonkeyModel extends HorseShoesModel {
 
     private static final float DONKEY_Y_OFFSET       = -1.6F;
-    private static final float DONKEY_X_INSET        =  1.4F;
+    private static final float DONKEY_X_OFFSET        =  1.5F;
     private static final float DONKEY_FRONT_Z_OFFSET =  1.75F;
     private static final float DONKEY_HIND_Z_OFFSET  = -1.5F;
 
@@ -49,21 +49,21 @@ public class HorseShoesDonkeyModel extends HorseShoesModel {
         float yShift = LEG_STANDING_Y_OFFSET * standing;
         float zShift = LEG_STANDING_Z_OFFSET * standing;
 
-        this.leftFrontShoe.x  = -DONKEY_X_INSET;
+        this.leftFrontShoe.x  = -DONKEY_X_OFFSET;
         this.leftFrontShoe.y  = FRONT_LEG_REST_Y + DONKEY_Y_OFFSET - yShift;
         this.leftFrontShoe.z  = FRONT_LEG_REST_Z + FRONT_Z + DONKEY_FRONT_Z_OFFSET + zShift;
 
-        this.rightFrontShoe.x =  DONKEY_X_INSET;
+        this.rightFrontShoe.x =  DONKEY_X_OFFSET;
         this.rightFrontShoe.y = FRONT_LEG_REST_Y + DONKEY_Y_OFFSET - yShift;
         this.rightFrontShoe.z = FRONT_LEG_REST_Z + FRONT_Z + DONKEY_FRONT_Z_OFFSET + zShift;
 
-        this.leftHindShoe.x  = -DONKEY_X_INSET;
-        this.leftHindShoe.y  = HIND_LEG_REST_Y + DONKEY_Y_OFFSET - yShift;
-        this.leftHindShoe.z  = HIND_LEG_REST_Z + HIND_Z + DONKEY_HIND_Z_OFFSET - zShift;
+        this.leftHindShoe.x  = -DONKEY_X_OFFSET;
+        this.leftHindShoe.y  = HIND_LEG_REST_Y + DONKEY_Y_OFFSET;
+        this.leftHindShoe.z  = HIND_LEG_REST_Z + HIND_Z + DONKEY_HIND_Z_OFFSET;
 
-        this.rightHindShoe.x =  DONKEY_X_INSET;
-        this.rightHindShoe.y = HIND_LEG_REST_Y + DONKEY_Y_OFFSET - yShift;
-        this.rightHindShoe.z = HIND_LEG_REST_Z + HIND_Z + DONKEY_HIND_Z_OFFSET - zShift;
+        this.rightHindShoe.x =  DONKEY_X_OFFSET;
+        this.rightHindShoe.y = HIND_LEG_REST_Y + DONKEY_Y_OFFSET;
+        this.rightHindShoe.z = HIND_LEG_REST_Z + HIND_Z + DONKEY_HIND_Z_OFFSET;
 
         this.pendingSync = null;
     }
