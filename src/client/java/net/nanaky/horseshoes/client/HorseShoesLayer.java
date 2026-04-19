@@ -40,7 +40,7 @@ public class HorseShoesLayer<S extends EquineRenderState>
         Identifier texture = horseshoesItem.getEntityTexture();
         AbstractEquineModelAccessor equineModel =
                 (AbstractEquineModelAccessor) this.getParentModel();
-        this.shoesModel.syncToHorseLegs(equineModel);
+        this.shoesModel.queueSync(equineModel);
 
         submitNodeCollector.order(2)
         .<S>submitModel(
