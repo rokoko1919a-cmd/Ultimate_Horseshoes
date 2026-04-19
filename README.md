@@ -16,7 +16,7 @@ Horses variants (Regular, Zombie, Skeleton), Mules and Donkeys can wear Horsesho
 
 There are **five** types of Horseshoes: Copper, Iron, Gold, Diamond and Netherite.
 
-![Iron, Golden, and Diamond Horseshoes](https://cdn.modrinth.com/data/cached_images/485e42cc32f4045fdc04e902c9803c329998ec81.png)
+![Copper, Iron, Golden, Diamond and Netherite Horseshoes](https://cdn.modrinth.com/data/z4gIGraY/images/dc73a31c5248d044b696bcf4ac9fc2b936644d4b.png)
 
 1. Copper Horseshoes: increases speed by **2 blocks per second**, jump by **0.5 block** and provides  **0.5 bar of armor**.
 2. Iron Horseshoes: increases speed by **2 blocks per second**, jump by **0.5 block** and provides  **1 bar of armor**.
