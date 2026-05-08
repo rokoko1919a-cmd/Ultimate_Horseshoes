@@ -12,7 +12,7 @@
     "sources": "https://github.com/nanakytim/ultimate_horseshoes"
   },
   "license": "MIT",
-  "icon": "assets/ultimate_horseshoes/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
