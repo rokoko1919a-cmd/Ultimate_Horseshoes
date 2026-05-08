@@ -1,5 +1,7 @@
 {
-  "item.ultimate_horseshoes.diamond_horseshoes":"Алмазные подковы",
-  "item.ultimate_horseshoes.golden_horseshoes":"Золотые подковы",
-  "item.ultimate_horseshoes.iron_horseshoes":"Железные подковы"
+  "item.ultimate_horseshoes.copper_horseshoes": "Медные подковы",
+  "item.ultimate_horseshoes.iron_horseshoes": "Железные подковы",
+  "item.ultimate_horseshoes.golden_horseshoes": "Золотые подковы",
+  "item.ultimate_horseshoes.diamond_horseshoes": "Алмазные подковы",
+  "item.ultimate_horseshoes.netherite_horseshoes": "Незеритовые подковы"
 }

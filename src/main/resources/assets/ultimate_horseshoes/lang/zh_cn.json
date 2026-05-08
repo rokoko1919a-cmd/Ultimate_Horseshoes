@@ -1,5 +1,7 @@
 {
-  "item.ultimate_horseshoes.diamond_horseshoes":"钻石马掌",
-  "item.ultimate_horseshoes.golden_horseshoes":"金马掌",
-  "item.ultimate_horseshoes.iron_horseshoes":"铁马掌"
+  "item.ultimate_horseshoes.copper_horseshoes": "铜马蹄铁",
+  "item.ultimate_horseshoes.iron_horseshoes": "铁马蹄铁",
+  "item.ultimate_horseshoes.golden_horseshoes": "金马蹄铁",
+  "item.ultimate_horseshoes.diamond_horseshoes": "钻石马蹄铁",
+  "item.ultimate_horseshoes.netherite_horseshoes": "下界合金马蹄铁"
 }

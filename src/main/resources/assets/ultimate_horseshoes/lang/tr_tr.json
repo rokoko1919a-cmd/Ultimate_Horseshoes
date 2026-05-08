@@ -1,5 +1,7 @@
 {
-  "item.ultimate_horseshoes.diamond_horseshoes":"Elmas At Nalı",
-  "item.ultimate_horseshoes.golden_horseshoes":"Altın At Nalı",
-  "item.ultimate_horseshoes.iron_horseshoes":"Demir At Nalı"
+  "item.ultimate_horseshoes.copper_horseshoes": "Bakır nallar",
+  "item.ultimate_horseshoes.iron_horseshoes": "Demir nallar",
+  "item.ultimate_horseshoes.golden_horseshoes": "Altın nallar",
+  "item.ultimate_horseshoes.diamond_horseshoes": "Elmas nallar",
+  "item.ultimate_horseshoes.netherite_horseshoes": "Netherite nallar"
 }
